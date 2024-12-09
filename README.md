@@ -27,17 +27,45 @@ cordova plugin add https://github.com/cesarcervantesb/cordova-plugin-application
 
 ## Usage
 
-The plugin creates the object cordova.plugins.mockLocation and is accessible after the deviceready event has been fired.
+The plugin creates the object cordova.plugins.appInfo and is accessible after the deviceready event has been fired.
 
 ```js
 document.addEventListener('deviceready', function () {
-    // cordova.plugins.mockLocation is now available
+    // cordova.plugins.appInfo is now available
 }, false);
 ```
 
 ## Available methods
 
-- `checkMockLocation` - check if current location is mock.
+- `getApplicationInfo` - Get application information.
 ```js
-mockLocation.checkMockLocation()
+appInfo.getApplicationInfo();
+```
+
+OR
+
+```js
+cordova.plugins.appInfo.getApplicationInfo();
+```
+
+Return a JSON Object that contains the application information:
+
+- appName
+- packageName
+- versionName
+- versionCode
+
+## Example
+
+```js
+appInfo.getApplicationInfo(function (appInfo){
+    // Success callback 
+    console.log("appName:"      + appInfo.appName);
+    console.log("packageName:"  + appInfo.packageName);
+    console.log("versionName:"  + appInfo.versionName);
+    console.log("versionCode:"  + appInfo.versionCode);
+}, function (error) {
+    // Error callback
+    console.log(error);
+});
 ```
