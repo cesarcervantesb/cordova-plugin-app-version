@@ -1,0 +1,27 @@
+{
+    "name": "@ccervantesb/cordova-plugin-application-info",
+    "version": "1.0.0",
+    "description": "This plugin allows get the application information from the app.",
+    "cordova": {
+      "id": "com.ccervantesb.appinfo",
+      "platforms": [
+        "android",
+        "ios"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/cesarcervantesb/cordova-plugin-application-info.git"
+    },
+    "keywords": [
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "author": "ccervantesb",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/cesarcervantesb/cordova-plugin-application-info/issues"
+    },
+    "homepage": "https://github.com/cesarcervantesb/cordova-plugin-application-info#readme"
+  }
+  
